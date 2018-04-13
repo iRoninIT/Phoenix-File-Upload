@@ -1,0 +1,18 @@
+<h2>Show Picture</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @picture.title %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <img src="<%= FileUploader.Image.url({ @picture.image, @picture }) %>" width="300" />
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: picture_path(@conn, :edit, @picture) %></span>
+<span><%= link "Back", to: picture_path(@conn, :index) %></span>
